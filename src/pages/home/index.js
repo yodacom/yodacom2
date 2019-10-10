@@ -39,7 +39,7 @@ function HomePage(props) {
       <ContentCardsSection
         color="white"
         size="medium"
-        title="Featured Content"
+        title="Featured Services"
         subtitle=""
       />
       <VideoSection

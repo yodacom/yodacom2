@@ -17,10 +17,10 @@ aws.config.update({
 // Load AWS SES
 const ses = new aws.SES({ apiVersion: "2010-12-01" });
 // Add your email address here
-const to = [""];
+const to = ["jb@yodacom.com"];
 // Also add your email address as the sender
 // Must belong to a verified SES account
-const from = "";
+const from = "jb@yodacom.com";
 
 app.post("/api/contact/subscribe", function(req, res) {
   ses.sendEmail(
@@ -29,7 +29,7 @@ app.post("/api/contact/subscribe", function(req, res) {
       Destination: { ToAddresses: to },
       Message: {
         Subject: {
-          Data: `Contact form submission`
+          Data: `Contact form submission from YodaCom`
         },
         Body: {
           Text: {
